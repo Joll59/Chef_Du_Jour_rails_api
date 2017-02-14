@@ -13,11 +13,20 @@
 ActiveRecord::Schema.define(version: 20170213203432) do
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone_number"
     t.string   "email"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "profile_pic_url"
+    t.integer  "average_user_rating"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
 end

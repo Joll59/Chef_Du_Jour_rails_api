@@ -1,6 +1,10 @@
 class Api::V1::UsersController < ApplicationController
 
-  def creaete
+  def index
+    puts  "yay!"
+  end
+
+  def create
     @user = User.new(user_params)
     if @user.save
     jwt  = Auth.encrypt({user_id: @user.id})

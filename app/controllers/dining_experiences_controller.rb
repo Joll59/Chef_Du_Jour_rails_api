@@ -1,0 +1,2 @@
+class DiningExperiencesController < ApplicationController
+end

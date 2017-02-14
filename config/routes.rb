@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :dining_experiences
+  resources :reservations
   namespace :api do
     namespace :v1 do
         post 'signup', to: 'users#create'

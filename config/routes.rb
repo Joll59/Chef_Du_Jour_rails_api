@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :dining_experiences
-  resources :reservations
   namespace :api do
     namespace :v1 do
-        post 'signup', to: 'users#create'
+      resources :dining_experiences, :reservations
+      resources :users, only: [:show, :update]
+      post 'signup', to: 'users#create'
+      get 'signup', to: 'users#index'
     end
   end# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

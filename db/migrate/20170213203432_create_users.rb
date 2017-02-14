@@ -10,7 +10,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :city
       t.string :state
       t.string :zipcode
-      t.string :chef_biography
+      t.text :chef_biography
       t.string :instagram
       t.string :personal_website
       t.string :password_digest

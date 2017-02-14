@@ -3,7 +3,8 @@ class CreateDiningExperiences < ActiveRecord::Migration[5.0]
     create_table :dining_experiences do |t|
       t.text :description
       t.integer :price
-      t.time :length
+      t.integer :length
+      t.integer :user_id
 
       t.timestamps
     end

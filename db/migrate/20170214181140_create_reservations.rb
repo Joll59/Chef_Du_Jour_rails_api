@@ -4,7 +4,7 @@ class CreateReservations < ActiveRecord::Migration[5.0]
       t.integer :dining_experience_id
       t.integer :user_id
       t.date :date
-      t.string :status
+      t.string :status, default: "available"
 
       t.timestamps
     end

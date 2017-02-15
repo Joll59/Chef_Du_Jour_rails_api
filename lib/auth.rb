@@ -4,8 +4,8 @@ ALGORITHM = 'HS256'
     JWT.encode(hash, secret_key, ALGORITHM)
   end
 
-  def self.decode()
-
+  def self.decode(payload)
+    JWT.decode(payload, secret_key, true, {algorithm: ALGORITHM}).first
   end
 
   def self.secret_key

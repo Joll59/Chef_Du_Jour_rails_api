@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::API
 
-
+  # we should rename this 'current_user'
   def find_user
     token = request.headers["HTTP_AUTHORIZATION"]
-	If  token
-		user_info = Auth.decode(token)
-		@current_user ||= User.find(user_info['id'])
+  	if token
+  		user_info = Auth.decode(token)
+  		@current_user ||= User.find(user_info['id'])
+    end
   end
-
 end

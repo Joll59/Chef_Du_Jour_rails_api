@@ -15,8 +15,8 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show
-    find_user
-
+    @user = find_user
+    render json: @user
   end
 
   def update

@@ -6,15 +6,17 @@ User.create(first_name: "Kim", last_name: "West", email: "kim@gmail.com", passwo
 
 # DiningExperience data
 #Created by User 1 (Josh)
-DiningExperience.create(title: "Dinner in Tuscany" description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper, dui in vulputate laoreet, augue lacus sollicitudin sem, in bibendum.", price: 100, length: 2, user_id: 1)
-DiningExperience.create(title: "Romantic Date Night" description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam tristique, sodales ante non, auctor dui. Suspendisse nulla tortor.", price: 200, length: 3, user_id: 1)
+DiningExperience.create(title: "Dinner in Tuscany", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper, dui in vulputate laoreet, augue lacus sollicitudin sem, in bibendum.", price: 100, length: 2, user_id: 1)
+DiningExperience.create(title: "Romantic Date Night", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam tristique, sodales ante non, auctor dui. Suspendisse nulla tortor.", price: 200, length: 3, user_id: 1)
 #Created by User 2 (Bob)
-DiningExperience.create(title: "Seafood for Two" description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis nisl eu est luctus tempor. Nulla cursus varius fermentum. Phasellus.", price: 50, length: 1, user_id: 2)
+DiningExperience.create(title: "Seafood for Two", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis nisl eu est luctus tempor. Nulla cursus varius fermentum. Phasellus.", price: 50, length: 1, user_id: 2)
 
 #Reservations data
 
-Reservation.create(dining_experience_id: 1, user_id: 3, date: 2/20/17)
-Reservation.create(dining_experience_id: 2, user_id: 3, date: 2/21/17)
-Reservation.create(dining_experience_id: 2, user_id: 2, date: 2/22/17)
-Reservation.create(dining_experience_id: 3, user_id: 1, date: 2/25/17)
-Reservation.create(dining_experience_id: 3, user_id: 3, date: 2/24/17)
+Reservation.create(dining_experience_id: 1, user_id: 3, date: 02/20/2017)
+Reservation.create(dining_experience_id: 2, user_id: 3, date: 02/21/2017)
+Reservation.create(dining_experience_id: 2, user_id: 2, date: 02/22/2017)
+Reservation.create(dining_experience_id: 3, user_id: 1, date: 02/25/2017)
+Reservation.create(dining_experience_id: 3, user_id: 3, date: 02/24/2017)
+
+#mm/dd/yyyy

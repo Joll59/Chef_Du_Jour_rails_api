@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :dining_experiences, :reservations
       resources :users, only: [:show, :update]
+
       post 'signup', to: 'users#create'
       post 'signin', to: 'sessions#create'
       get 'users', to: 'users#index'

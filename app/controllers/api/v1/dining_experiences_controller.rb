@@ -14,7 +14,7 @@ class Api::V1::DiningExperiencesController < ApplicationController
 
 
 
-##returns ALL dining experiences
+##returns ALL dining experiences not reserved!
   def index
     dining_experiences = DiningExperience.all
     render json: dining_experiences

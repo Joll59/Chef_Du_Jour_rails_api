@@ -24,8 +24,7 @@ class Api::V1::DiningExperiencesController < ApplicationController
   def show
     binding.pry
     user = find_user
-    dining_experience =
-
+    my_dining_experience = DiningExperience.find_by(user)
   end
 
   private

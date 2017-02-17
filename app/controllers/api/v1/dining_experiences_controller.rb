@@ -17,7 +17,7 @@ class Api::V1::DiningExperiencesController < ApplicationController
 
   def show
     user = find_user
-    binding.pry
+
   end
   private
 

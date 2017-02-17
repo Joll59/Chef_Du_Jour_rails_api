@@ -1,12 +1,25 @@
-class ReservationsController < ApplicationController
+class Api::V1::ReservationsController < ApplicationController
 
-  def create(reservation_params)
-    @reservation = Reservation.new(reservation_params)
+  def create
+    find_user
+    @reservation = Reservation.new(dining_experience_id: params['id'], user_id: @user.id)
+    @reservation.status = 'reserved'
+    
+    if @reservation.save
+      render json: @reservation
+    else
+      render json: { status: 404 }
+    end
   end
 
   private
 
   def reservation_params
-    params.require(:reservation).permit(:date, :status)
+    params.permit(:date, :status)
   end
 end
+
+# t.integer  "dining_experience_id"
+# t.integer  "user_id"
+# t.date     "date"
+# t.string   "status",

@@ -5,7 +5,6 @@ class Api::V1::DiningExperiencesController < ApplicationController
     dining_experience = DiningExperience.new(dining_experience_params)
     dining_experience.user = user
     dining_experience.save
-
     render json: dining_experience
 
   end

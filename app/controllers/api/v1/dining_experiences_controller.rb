@@ -10,15 +10,24 @@ class Api::V1::DiningExperiencesController < ApplicationController
 
   end
 
+##aciont to return index of my dining expiriences
+
+
+
+##returns ALL dining experiences
   def index
     dining_experiences = DiningExperience.all
     render json: dining_experiences
   end
 
+###show a redirect from the create action // show a specific DE
   def show
+    binding.pry
     user = find_user
+    dining_experience =
 
   end
+
   private
 
   def dining_experience_params

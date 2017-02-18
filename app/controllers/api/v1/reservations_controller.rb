@@ -4,12 +4,18 @@ class Api::V1::ReservationsController < ApplicationController
     find_user
     @reservation = Reservation.new(dining_experience_id: params['id'], user_id: @user.id)
     @reservation.status = 'reserved'
-    
+
     if @reservation.save
       render json: @reservation
     else
       render json: { status: 404 }
     end
+  end
+
+
+  def show
+    available_reservations = Reservation.available_reservations
+    render json: available_reservations
   end
 
   private

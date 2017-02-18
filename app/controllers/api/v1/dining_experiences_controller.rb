@@ -13,10 +13,10 @@ class Api::V1::DiningExperiencesController < ApplicationController
 
 
 
-##returns ALL dining experiences not reserved!
+##returns available dining_experiences!
   def index
-    dining_experiences = DiningExperience.all
-    render json: dining_experiences
+    available_dining_experiences = DiningExperience.all
+    render json: available_dining_experiences
   end
 
 ###show a redirect from the create action // show a specific DE

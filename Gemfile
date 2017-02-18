@@ -12,6 +12,7 @@ gem 'dotenv-rails'
 gem 'rest-client'
 gem 'active_model_serializers'
 gem 'pry'
+gem 'railroady'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

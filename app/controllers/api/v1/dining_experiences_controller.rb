@@ -21,9 +21,8 @@ class Api::V1::DiningExperiencesController < ApplicationController
 
 ###show a redirect from the create action // show a specific DE
   def show
-    binding.pry
-    user = find_user
-    my_dining_experience = DiningExperience.find_by(user)
+    @dining_experience = DiningExperience.find(params["id"])
+    render json: @dining_experience
   end
 
   private

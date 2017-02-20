@@ -6,4 +6,7 @@ class Api::V1::MyDiningExperiencesController < ApplicationController
     render json: users_created_experiences
   end
 
+  def show
+  end
+
 end

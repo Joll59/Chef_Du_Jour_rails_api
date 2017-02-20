@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20170216143159) do
   create_table "reservations", force: :cascade do |t|
     t.integer  "dining_experience_id"
     t.integer  "user_id"
-    t.date     "date" 
-    t.string   "status",               default: "available"
+    t.date     "date"
+    t.string   "status",               default: "pending"
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
   end

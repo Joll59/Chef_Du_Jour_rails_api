@@ -15,15 +15,16 @@ class Api::V1::DiningExperiencesController < ApplicationController
 
 ##returns available dining_experiences!
   def index
-    # available_dining_experiences = DiningExperience.all
-    available_dining_experiences = Reservation.available_reservations
+    available_dining_experiences = DiningExperience.all
     render json: available_dining_experiences
   end
 
 ###show a redirect from the create action // show a specific DE
   def show
+
     my_dining_experience = DiningExperience.find(params["id"])
     render json: my_dining_experience
+
   end
 
   private

@@ -20,11 +20,15 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def update
-
     @user = find_user
     @user.update(user_params)
-    
     render json: @user
+  end
+
+  def destroy
+    @user = find_user
+    @user.destroy
+    render json: {message: 'User Successfully Removed'}
   end
 
 

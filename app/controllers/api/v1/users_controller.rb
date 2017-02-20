@@ -20,7 +20,11 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def update
-    find_user
+
+    @user = find_user
+    @user.update(user_params)
+    
+    render json: @user
   end
 
 

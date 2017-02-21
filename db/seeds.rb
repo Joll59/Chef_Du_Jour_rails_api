@@ -12,16 +12,19 @@ DiningExperience.create(title: "Romantic Date Night", description: "Lorem ipsum 
 #Created by User 2 (Bob)
 DiningExperience.create(title: "Seafood for Two", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis nisl eu est luctus tempor. Nulla cursus varius fermentum. Phasellus.", price: 50, length: 1, user_id: 2)
 DiningExperience.create(title: "Desert Feast for Two", description: "Enjoy the on fire Baked Alaska along with Thin Mints", price: 50, length: 4, user_id: 5)
+DiningExperience.create(title: "Pizza Party", description: "Home Made (not quite) brick oven pizza with all the toppings", price: 35, length: 3, user_id: 5)
 
 #Reservations data
-
-
 Reservation.create(dining_experience_id: 1, user_id: 3, date: Date.new(2017,2,20))
 Reservation.create(dining_experience_id: 2, user_id: 3, date: Date.new(2017,2,21))
 Reservation.create(dining_experience_id: 2, user_id: 2, date: Date.new(2017,2,23))
 Reservation.create(dining_experience_id: 3, user_id: 1, date: Date.new(2017,2,25))
 Reservation.create(dining_experience_id: 3, user_id: 3, date: Date.new(2017,2,24))
 Reservation.create(dining_experience_id: 4, user_id: 5, date: Date.new(2017,2,24))
+Reservation.create(dining_experience_id: 5, user_id: 5, date: Date.new(2017,2,24))
 
-
-#mm/dd/yyyy
+SignatureDish.create(dining_experience_id: 5, image_url: "http://bit.ly/2m5onzZ") #pizza
+SignatureDish.create(dining_experience_id: 4, image_url: "http://bit.ly/2kIWsp8") #baked alaska
+SignatureDish.create(dining_experience_id: 3, image_url: "http://bit.ly/2mj2VmX") #seafood
+SignatureDish.create(dining_experience_id: 2, image_url: "http://bit.ly/2m5nya8") #sexy wine
+SignatureDish.create(dining_experience_id: 1, image_url: "http://bit.ly/2mj7zkM") #tuscony

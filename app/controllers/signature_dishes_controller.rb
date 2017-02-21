@@ -1,0 +1,2 @@
+class SignatureDishesController < ApplicationController
+end

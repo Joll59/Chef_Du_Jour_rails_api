@@ -15,11 +15,11 @@ DiningExperience.create(title: "Desert Feast for Two", description: "Enjoy the o
 
 #Reservations data
 
-Reservation.create(dining_experience_id: 1, user_id: 3, date: 02/20/2017)
-Reservation.create(dining_experience_id: 2, user_id: 3, date: 02/21/2017)
-Reservation.create(dining_experience_id: 2, user_id: 2, date: 02/22/2017)
-Reservation.create(dining_experience_id: 3, user_id: 1, date: 02/25/2017)
-Reservation.create(dining_experience_id: 3, user_id: 3, date: 02/24/2017)
-Reservation.create(dining_experience_id: 4, user_id: 5, date: 02/24/2017)
+Reservation.create(dining_experience_id: 1, user_id: 3, date: Date.new(2017,02,20))
+Reservation.create(dining_experience_id: 2, user_id: 3, date: Date.new(2017,02,21))
+Reservation.create(dining_experience_id: 2, user_id: 2, date: Date.new(2017,02,22))
+Reservation.create(dining_experience_id: 3, user_id: 1, date: Date.new(2017,02,23))
+Reservation.create(dining_experience_id: 3, user_id: 3, date: Date.new(2017,02,25))
+Reservation.create(dining_experience_id: 4, user_id: 5, date: Date.new(2017,02,24))
 
 #mm/dd/yyyy

@@ -8,9 +8,9 @@ Rails.application.routes.draw do
       end
 
       post 'signup', to: 'users#create'
-      post 'reservationsbyCalendar', to: 'reservations#calendar'
       post 'signin', to: 'sessions#create'
       get 'users', to: 'users#index'
+      post 'reservationCalendar', to: 'reservations#index'
     end
   end# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

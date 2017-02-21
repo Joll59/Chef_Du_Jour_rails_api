@@ -2,7 +2,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     find_user
-
     @reservation = Reservation.new(dining_experience_id: params['id'], user_id: @user.id, date: Date.today)
     @reservation.status = 'reserved'
       if @reservation.save
@@ -18,7 +17,7 @@ class Api::V1::ReservationsController < ApplicationController
 
   def index
     booked_listings = []
-    todays_date = Date.today #params["date"] current format is (ddd, D MMM YYYY) (Mon, 20 Feb 2017)
+    todays_date = Date.parse(params["date"]) #current format is (ddd, D MMM YYYY) (Mon, 20 Feb 2017)
     Reservation.find_each do |reservation|
       if reservation.date == todays_date
         booked_listings << reservation.dining_experience
@@ -26,26 +25,9 @@ class Api::V1::ReservationsController < ApplicationController
   end
    all_listings = DiningExperience.all
    available_listings = all_listings - booked_listings
+  #  binding.pry
    render json: available_listings
   end
-
-
-# Josh I am messing around here don't DELETE YET!
-  def calendar
-    @booked_listings = []
-    # binding.pry
-    @todays_date = params["date"] #current format is (ddd, D MMM YYYY) (Mon, 20 Feb 2017)
-    Reservation.find_each do |reservation|
-      if reservation.date == @todays_date
-        @booked_listings << reservation.dining_experience
-      end
-  end
-   @all_listings = DiningExperience.all
-   @available_listings = @all_listings - @booked_listings
-   render json: @available_listings
-  end
-
-
 
   private
 

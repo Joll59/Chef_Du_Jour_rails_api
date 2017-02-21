@@ -17,7 +17,6 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def index
-
     selected_date = Date.parse(params["date"])
     available_listings = Reservation.find_available_listings(selected_date)
     render json: available_listings

@@ -8,6 +8,10 @@ class DiningExperience < ApplicationRecord
   #DiningExperience.First.user
   #returns the user who created this experience
   belongs_to :user
+
+  def self.reservations
+    DiningExperience
+  end
 end
 
 

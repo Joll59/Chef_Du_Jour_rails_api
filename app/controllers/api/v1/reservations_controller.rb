@@ -16,17 +16,9 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def index
-    booked_listings = []
-    todays_date = Date.parse(params["date"]) #current format is (ddd, D MMM YYYY) (Mon, 20 Feb 2017)
-    Reservation.find_each do |reservation|
-      if reservation.date == todays_date
-        booked_listings << reservation.dining_experience
-      end
-  end
-   all_listings = DiningExperience.all
-   available_listings = all_listings - booked_listings
-  #  binding.pry
-   render json: available_listings
+
+    available_listings = Reservation.find_available_listings(Date.parse(params["date"]))
+    render json: available_listings
   end
 
   private

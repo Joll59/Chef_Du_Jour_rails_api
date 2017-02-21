@@ -1,8 +1,9 @@
 class Api::V1::ReservationsController < ApplicationController
 
   def create
-    find_user
-    @reservation = Reservation.new(dining_experience_id: params['id'], user_id: @user.id, date: Date.today)
+    user_id = find_user.id
+    selected_date = Date.parse(params["date"])
+    @reservation = Reservation.new(dining_experience_id: params['id'], user_id: user_id, date: selected_date)
     @reservation.status = 'reserved'
       if @reservation.save
         render json: @reservation
@@ -17,9 +18,12 @@ class Api::V1::ReservationsController < ApplicationController
 
   def index
 
-    available_listings = Reservation.find_available_listings(Date.parse(params["date"]))
+    selected_date = Date.parse(params["date"])
+    available_listings = Reservation.find_available_listings(selected_date)
     render json: available_listings
   end
+
+
 
   private
 

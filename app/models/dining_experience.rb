@@ -9,6 +9,10 @@ class DiningExperience < ApplicationRecord
   belongs_to :user
 
 
+
+  def self.reservations
+    DiningExperience
+  end
 end
 
 

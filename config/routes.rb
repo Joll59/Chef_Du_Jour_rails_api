@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       end
 
       post 'signup', to: 'users#create'
+      post 'reservationsbyCalendar', to: 'reservations#calendar'
       post 'signin', to: 'sessions#create'
       get 'users', to: 'users#index'
     end

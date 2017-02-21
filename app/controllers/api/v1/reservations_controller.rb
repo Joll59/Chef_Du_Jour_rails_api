@@ -2,7 +2,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     find_user
-
     @reservation = Reservation.new(dining_experience_id: params['id'], user_id: @user.id, date: Date.today)
     @reservation.status = 'reserved'
         if @reservation.save
@@ -17,16 +16,8 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def index
-    booked_listings = []
-    todays_date = Date.today #params["date"]
-    Reservation.find_each do |reservation|
-      if reservation.date == todays_date
-        booked_listings << reservation.dining_experience
-      end
-  end
-   all_listings = DiningExperience.all
-   available_listings = all_listings - booked_listings
-   render json: available_listings
+    available_listings = Reservation.find_available_listings(Date.today)
+    render json: available_listings
   end
 
 

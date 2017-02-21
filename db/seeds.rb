@@ -14,15 +14,14 @@ DiningExperience.create(title: "Seafood for Two", description: "Lorem ipsum dolo
 DiningExperience.create(title: "Desert Feast for Two", description: "Enjoy the on fire Baked Alaska along with Thin Mints", price: 50, length: 4, user_id: 5)
 DiningExperience.create(title: "Pizza Party", description: "Home Made (not quite) brick oven pizza with all the toppings", price: 35, length: 3, user_id: 5)
 
-
 #Reservations data
-Reservation.create(dining_experience_id: 1, user_id: 3, date: 02/20/2017)
-Reservation.create(dining_experience_id: 2, user_id: 3, date: 02/21/2017)
-Reservation.create(dining_experience_id: 2, user_id: 2, date: 02/22/2017)
-Reservation.create(dining_experience_id: 3, user_id: 1, date: 02/25/2017)
-Reservation.create(dining_experience_id: 3, user_id: 3, date: 02/24/2017)
-Reservation.create(dining_experience_id: 4, user_id: 5, date: 02/24/2017)
-Reservation.create(dining_experience_id: 5, user_id: 5, date: 02/24/2017)
+Reservation.create(dining_experience_id: 1, user_id: 3, date: Date.new(2017,2,20))
+Reservation.create(dining_experience_id: 2, user_id: 3, date: Date.new(2017,2,21))
+Reservation.create(dining_experience_id: 2, user_id: 2, date: Date.new(2017,2,23))
+Reservation.create(dining_experience_id: 3, user_id: 1, date: Date.new(2017,2,25))
+Reservation.create(dining_experience_id: 3, user_id: 3, date: Date.new(2017,2,24))
+Reservation.create(dining_experience_id: 4, user_id: 5, date: Date.new(2017,2,24))
+Reservation.create(dining_experience_id: 5, user_id: 5, date: Date.new(2017,2,24))
 
 SignatureDish.create(dining_experience_id: 5, image_url: "http://bit.ly/2m5onzZ") #pizza
 SignatureDish.create(dining_experience_id: 4, image_url: "http://bit.ly/2kIWsp8") #baked alaska

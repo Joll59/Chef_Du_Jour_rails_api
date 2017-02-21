@@ -1,15 +1,15 @@
 class Api::V1::ReservationsController < ApplicationController
 
   def create
-    find_user
-
-    @reservation = Reservation.new(dining_experience_id: params['id'], user_id: @user.id, date: Date.today)
+    user_id = find_user.id
+    selected_date = Date.parse(params["date"])
+    @reservation = Reservation.new(dining_experience_id: params['id'], user_id: user_id, date: selected_date)
     @reservation.status = 'reserved'
-        if @reservation.save
-      render json: @reservation
-    else
-      render json: { status: 404 }
-    end
+      if @reservation.save
+        render json: @reservation
+      else
+        render json: { status: 404 }
+      end
   end
 
 
@@ -17,17 +17,12 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def index
-    booked_listings = []
-    todays_date = Date.today #params["date"]
-    Reservation.find_each do |reservation|
-      if reservation.date == todays_date
-        booked_listings << reservation.dining_experience
-      end
+
+    selected_date = Date.parse(params["date"])
+    available_listings = Reservation.find_available_listings(selected_date)
+    render json: available_listings
   end
-   all_listings = DiningExperience.all
-   available_listings = all_listings - booked_listings
-   render json: available_listings
-  end
+
 
 
   private

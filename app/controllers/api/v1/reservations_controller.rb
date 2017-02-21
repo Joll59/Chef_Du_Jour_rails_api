@@ -5,11 +5,11 @@ class Api::V1::ReservationsController < ApplicationController
     selected_date = Date.parse(params["date"])
     @reservation = Reservation.new(dining_experience_id: params['id'], user_id: user_id, date: selected_date)
     @reservation.status = 'reserved'
-        if @reservation.save
-      render json: @reservation
-    else
-      render json: { status: 404 }
-    end
+      if @reservation.save
+        render json: @reservation
+      else
+        render json: { status: 404 }
+      end
   end
 
 
@@ -17,15 +17,12 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def index
+
     selected_date = Date.parse(params["date"])
     available_listings = Reservation.find_available_listings(selected_date)
     render json: available_listings
   end
 
-  # def search
-  #   available_listings = Reservation.find_available_listings(params[:date])
-  #   render json: available_listings
-  # end
 
 
   private

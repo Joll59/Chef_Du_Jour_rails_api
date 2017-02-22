@@ -28,7 +28,6 @@ class Api::V1::DiningExperiencesController < ApplicationController
   end
 
   def update
-    # binding.pry
     @dining_experience = DiningExperience.find(params["id"])
     @dining_experience.update(dining_experience_params)
     render json: @dining_experience

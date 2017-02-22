@@ -4,7 +4,6 @@ class Api::V1::ReservationsController < ApplicationController
     user_id = find_user.id
     selected_date = Date.parse(params["date"])
     @reservation = Reservation.new(dining_experience_id: params['id'], user_id: user_id, date: selected_date)
-    @reservation.status = 'reserved'
       if @reservation.save
         render json: @reservation
       else
@@ -15,8 +14,7 @@ class Api::V1::ReservationsController < ApplicationController
 
   def show
     user_id = find_user.id
-    reservation = Reservation.where(user_id: user_id, status: "reserved")
-    # binding.pry
+    reservation = Reservation.where(user_id: user_id)
     render json: reservation
   end
 

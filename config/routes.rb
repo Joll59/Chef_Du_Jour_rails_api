@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       post 'signin', to: 'sessions#create'
       get 'users', to: 'users#index'
       post 'reservationCalendar', to: 'reservations#index'
+      get '/my_reservations', to: 'reservations#show'
     end
   end# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

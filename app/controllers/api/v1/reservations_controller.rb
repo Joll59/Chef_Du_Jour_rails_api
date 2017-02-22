@@ -14,6 +14,10 @@ class Api::V1::ReservationsController < ApplicationController
 
 
   def show
+    user_id = find_user.id
+    reservation = Reservation.where(user_id: user_id, status: "reserved")
+    # binding.pry
+    render json: reservation
   end
 
   def index

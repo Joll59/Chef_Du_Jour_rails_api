@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 20170221204728) do
   create_table "reservations", force: :cascade do |t|
     t.integer  "dining_experience_id"
     t.integer  "user_id"
-    t.date     "date"
-    t.string   "status",               default: "pending"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
+    t.string   "date"
+    t.string   "status",               default: "reserved"
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
   end
 
   create_table "signature_dishes", force: :cascade do |t|
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20170221204728) do
     t.string   "city"
     t.string   "state"
     t.string   "zipcode"
-    t.string   "chef_biography"
+    t.text     "chef_biography"
     t.string   "instagram"
     t.string   "personal_website"
     t.string   "password_digest"

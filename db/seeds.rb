@@ -5,16 +5,16 @@ User.create(first_name: "Adam", last_name: "Richman", email: "adam@theadamrichma
 
 User.create(first_name: "Gordon", last_name: "Ramsay", email: "kim@gmail.com", password: "1234", phone_number: "222-222-2222", street1: "stanton", street2: "apt 8f", city: "New York", state: "NY", zipcode: "10005", chef_biography: "generalenquiries@gordonramsay.com", instagram: "gordongram", personal_website: "www.gordonramsay.com")
 
-User.create(first_name: "Rob", last_name: "Hitt", email: "robhitt@gmail.com", password: "1234", phone_number: "732-682-4952", street1: "214 N. 11th St.", street2: "Apt 3V", city: "Brooklyn", state: "NY", zipcode: "11211", chef_biography: "I'm the culinary king, graduated Harvard culinary school with my PH-Delicious", instagram:"robhitt", personal_website:"www.robhitt.com")
+User.create(first_name: "Rob", last_name: "Hitt", email: "robert@gmail.com", password: "1234", phone_number: "732-635-5954", street1: "214 N. 11th St.", street2: "Apt 4", city: "Brooklyn", state: "NY", zipcode: "11211", chef_biography: "I'm the culinary king, graduated Harvard culinary school with my PH-Delicious", instagram:"robhitt", personal_website:"www.robhitt.com")
 
 
 # DiningExperience data
 #Created by User 1 (Josh)
 DiningExperience.create(title: "Dinner in Tuscany", description: "Enjoy a 4-course Tuscan meal in a Florentine house Get an at home experience. Relax with your hospitable local chef and njoy quality home-cooked food in a friendly environment. Learn about Tuscan cuisine and share foodie tips with like-minded people in your group Start your meal with an aperitif and end with coffee Small-group experience with a maximum of 12 people ensures a more intimate atmosphere.", price: 100, length: 2, user_id: 1)
-DiningExperience.create(title: "Romantic Date Night", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam tristique, sodales ante non, auctor dui. Suspendisse nulla tortor.", price: 200, length: 3, user_id: 1)
+DiningExperience.create(title: "Romantic Date Night", description: "I will provide you with a wonderful romantic dinner.  Prepare yourself for a dessert with a heart shaped chocolate mousse.", price: 200, length: 3, user_id: 1)
 #Created by User 2 (Bob)
 DiningExperience.create(title: "Seafood for Two", description: "This is a great alternative to the standard salmon patty recipe using couscous, spinach, and cumin for an exotic flavor.  Cooked by yours truly bc when we see food, we eat it.", price: 50, length: 1, user_id: 2)
-DiningExperience.create(title: "Desert Feast for Two", description: "Enjoy the on fire Baked Alaska along with Thin Mints", price: 50, length: 4, user_id: 5)
+DiningExperience.create(title: "Dessert Feast for Two", description: "Enjoy the on fire Baked Alaska along with Thin Mints", price: 50, length: 4, user_id: 5)
 DiningExperience.create(title: "Pizza Party", description: "Home Made (not quite) brick oven pizza with all the toppings", price: 35, length: 3, user_id: 5)
 
 #Reservations data

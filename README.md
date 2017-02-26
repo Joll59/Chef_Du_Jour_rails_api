@@ -1,7 +1,9 @@
 # Chef-du-Jour-api
 
 ## Crowd sourced on-demand personal chef service. (back-end)
-Team : @robhitt, @jmpann
+Team : robhitt, jmpann
+
+set-up is easy!
 
 * bundle install 
 

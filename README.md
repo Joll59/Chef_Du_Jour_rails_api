@@ -1,7 +1,8 @@
 # Chef-du-Jour-api
 
 ## Crowd sourced on-demand personal chef service. (back-end)
-Team : robhitt, jmpann
+### front - end is built on react. [chef-du-jour-react](https://github.com/robhitt/chef-du-jour-react) 
+Team : [Rob Hitt](https://github.com/robhitt), [Josh Pann](https://github.com/jmpann)
 
 set-up is easy!
 

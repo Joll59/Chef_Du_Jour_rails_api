@@ -5,7 +5,7 @@ User.create(first_name: "Adam", last_name: "Richman", email: "adam@theadamrichma
 
 User.create(first_name: "Gordon", last_name: "Ramsay", email: "kim@gmail.com", password: "1234", phone_number: "222-222-2222", street1: "stanton", street2: "apt 8f", city: "New York", state: "NY", zipcode: "10005", chef_biography: "generalenquiries@gordonramsay.com", instagram: "gordongram", personal_website: "www.gordonramsay.com")
 
-User.create(first_name: "Rob", last_name: "Hitt", email: "robert@gmail.com", password: "1234", phone_number: "732-635-5954", street1: "214 N. 11th St.", street2: "Apt 4", city: "Brooklyn", state: "NY", zipcode: "11211", chef_biography: "I'm the culinary king, graduated Harvard culinary school with my PH-Delicious", instagram:"robhitt", personal_website:"www.robhitt.com")
+User.create(first_name: "Rob", last_name: "Hitt", email: "robhitt@gmail.com", password: "1234", phone_number: "732-635-5954", street1: "214 N. 11th St.", street2: "Apt 4", city: "Brooklyn", state: "NY", zipcode: "11211", chef_biography: "I'm the culinary king, graduated Harvard culinary school with my PH-Delicious", instagram:"robhitt", personal_website:"www.robhitt.com")
 
 
 # DiningExperience data
